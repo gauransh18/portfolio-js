@@ -109,6 +109,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -754,4 +756,18 @@ section, div[id="skills"] {
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
   }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure particles stay behind content */
+}
+
+.hero {
+  position: relative; /* Establish positioning context for particles */
+  overflow: hidden;   /* Hide any overflowing particles */
 }
