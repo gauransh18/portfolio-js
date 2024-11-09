@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gauransh - Creative Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Abel&family=Bungee+Hairline:wght@400;700&family=Yuji+Boku&family=Gruppo&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">fas fas hire</div>
+      <div class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#" id="resume-btn" class="resume-btn">
+          <i class="icon">📄</i>RESUME
+        </a>
+        <a href="#" id="artwork-btn" class="artwork-btn">
+          <i class="icon">🎨</i>ART WORK
+        </a>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <h1>hi, i'm gauransh</h1>
+        <p class="subtitle">computer engineer</p>
+
+        <button class="cta-button" onclick="scrollToContact(event)">
+          Got a project? Let's talk!
+        </button>
+
+        <p class="typing-text">I can <span id="changing-text"></span></p>
+
+        <div class="skills-container" id="skills">
+          <!-- Marquee Rows -->
+          <div class="marquee-row">
+            <div class="marquee-content">
+              <!-- Skill Cards -->
+              <div class="skill-card">
+                <img src="assets/flutter.png" alt="Flutter" />
+                <span>Flutter</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/dart.png" alt="Dart" />
+                <span>Dart</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/premiere.png" alt="Premiere Pro" />
+                <span>Premiere Pro</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/illustrator.png" alt="Illustrator" />
+                <span>Illustrator</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/appwrite.png" alt="Appwrite" />
+                <span>Appwrite</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/aws.png" alt="AWS" />
+                <span>AWS</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/git.png" alt="Git" />
+                <span>Git</span>
+              </div>
+              <!-- Add more duplicates as needed -->
+              <div class="skill-card">
+                <img src="assets/flutter.png" alt="Flutter" />
+                <span>Flutter</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/dart.png" alt="Dart" />
+                <span>Dart</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/premiere.png" alt="Premiere Pro" />
+                <span>Premiere Pro</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/illustrator.png" alt="Illustrator" />
+                <span>Illustrator</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/appwrite.png" alt="Appwrite" />
+                <span>Appwrite</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/aws.png" alt="AWS" />
+                <span>AWS</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/git.png" alt="Git" />
+                <span>Git</span>
+              </div>
+              <!-- Duplicate for seamless loop -->
+              <div class="skill-card">
+                <img src="assets/flutter.png" alt="Flutter" />
+                <span>Flutter</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/dart.png" alt="Dart" />
+                <span>Dart</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-row reverse">
+            <div class="marquee-content">
+              <!-- Skill Cards -->
+              <div class="skill-card">
+                <img src="assets/canva.png" alt="Canva" />
+                <span>Canva</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/figma.png" alt="Figma" />
+                <span>Figma</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/python.png" alt="Python" />
+                <span>Python</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/golang.png" alt="GO" />
+                <span>GO</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/js.png" alt="JavaScript" />
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/procreate.png" alt="Procreate" />
+                <span>Procreate</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/photoshop.png" alt="Photoshop" />
+                <span>Photoshop</span>
+              </div>
+              <!-- Add more duplicates as needed -->
+              <div class="skill-card">
+                <img src="assets/canva.png" alt="Canva" />
+                <span>Canva</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/figma.png" alt="Figma" />
+                <span>Figma</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/python.png" alt="Python" />
+                <span>Python</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/golang.png" alt="GO" />
+                <span>GO</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/js.png" alt="JavaScript" />
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/procreate.png" alt="Procreate" />
+                <span>Procreate</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/photoshop.png" alt="Photoshop" />
+                <span>Photoshop</span>
+              </div>
+              <!-- Duplicate for seamless loop -->
+              <div class="skill-card">
+                <img src="assets/docker.webp" alt="Docker" />
+                <span>Docker</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/kubernetes.png" alt="Kubernetes" />
+                <span>Kubernetes</span>
+              </div>
+              
+
+              <div class="skill-card">
+                <img src="assets/canva.png" alt="Canva" />
+                <span>Canva</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/figma.png" alt="Figma" />
+                <span>Figma</span>
+              </div>
+
+              
+            </div>
+          </div>
+
+          <div class="marquee-row">
+            <div class="marquee-content">
+              <!-- Skill Cards -->
+               
+              <div class="skill-card">
+                <img src="assets/react.png" alt="React" />
+                <span>React</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/swift.png" alt="Swift" />
+                <span>Swift</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/cpp.png" alt="C++" />
+                <span>C++</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="assets/vectornator.png" alt="Vectornator" />
+                <span>Vectornator</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/sql.png" alt="MySQL" />
+                <span>MySQL</span>
+              </div>
+              <!-- Add more duplicates as needed -->
+              <div class="skill-card">
+                <img src="assets/jenkins.png" alt="Jenkins" />
+                <span>Jenkins</span>
+              </div>
+              <div class="skill-card">
+                
+                <img src="assets/firebase.png" alt="Firebase" />
+                <span>Firebase</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/react.png" alt="React" />
+                <span>React</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/swift.png" alt="Swift" />
+                <span>Swift</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/cpp.png" alt="C++" />
+                <span>C++</span>
+              </div>
+
+              <div class="skill-card">
+                <img src="assets/vectornator.png" alt="Vectornator" />
+                <span>Vectornator</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/sql.png" alt="MySQL" />
+                <span>MySQL</span>
+              </div>
+              <!-- Duplicate for seamless loop -->
+              <div class="skill-card">
+                <img src="assets/react.png" alt="React" />
+                <span>React</span>
+              </div>
+              <div class="skill-card">
+                <img src="assets/swift.png" alt="Swift" />
+                <span>Swift</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-container">
+          <!-- Existing project cards -->
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Resilient Microservices Architecture</h3>
+              <p>
+                A robust microservices system with fault tolerance and real-time
+                monitoring.
+              </p>
+              <div class="tech-stack">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>Docker</span>
+                <span>Prometheus</span>
+                <span>Fluentd</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="github-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Lenk - AI Chat Application</h3>
+              <p>
+                AI-powered chat application with sentiment analysis and smart
+                reply suggestions.
+              </p>
+              <div class="tech-stack">
+                <span>Flutter</span>
+                <span>Firebase</span>
+                <span>React</span>
+                <span>AI/ML</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="github-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Portfolio Website</h3>
+              <p>Modern, responsive portfolio website with interactive elements and smooth animations.</p>
+              <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>React</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link">View Project</a>
+                <a href="#" class="github-link">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- View More Projects Card -->
+          <div class="project-card view-more-projects">
+            <h3>More Projects on GitHub</h3>
+            <div class="project-highlights">
+              <span>Portfolio Website</span>
+              <span>Github User Search</span>
+              <span>iOS Weather App</span>
+              <span>Go WebSockets Chat</span>
+            </div>
+            <a href="https://github.com/gauransh18" target="_blank" class="github-profile-link">
+              <i class="icon">🚀</i>
+              View All Projects
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline" id="experience">
+        <h2>Experience & Education</h2>
+        <div class="timeline-container">
+          <!-- Current Role -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">January 2024 - Present</div>
+              <h3>Chief Product Officer</h3>
+              <h4>Remote Startup Roles</h4>
+              <ul>
+                <li>Leading development at InOsway (Travel Tech Startup), directing website project using React and Appwrite</li>
+                <li>Spearheading BlindMe (Dating App Startup), implementing features using Flutter and Firebase</li>
+                <li>Designed cloud-native infrastructure with continuous monitoring systems</li>
+                <li>Implemented high-availability architecture and scalability solutions</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Technical Head -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">January 2024 - Present</div>
+              <h3>Technical Head</h3>
+              <h4>Soft Computing Research Society</h4>
+              <p>Leading technical initiatives and research projects</p>
+            </div>
+          </div>
+
+          <!-- AWS SA Certificate -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">February 2024</div>
+              <h3>AWS Solution Architect Certificate</h3>
+            </div>
+          </div>
+
+          <!-- AWS CP Certificate -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">January 2024</div>
+              <h3>AWS Cloud Practitioner Certificate</h3>
+            </div>
+          </div>
+
+          <!-- Edventures -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">December 2023 - February 2024</div>
+              <h3>Flutter Engineer and Advisor</h3>
+              <h4>Edventures Sweden - Remote</h4>
+              <ul>
+                <li>Lead Flutter Engineer, integrating Appwrite backend with AI chatbots</li>
+                <li>Guided tech team in web and mobile projects with focus on UX design</li>
+                <li>Developed AI chatbot web app with user flow tracking capabilities</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Clinigo -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">June 2023 - August 2023</div>
+              <h3>Front End Developer Intern</h3>
+              <h4>Clinigo Vellore - Remote</h4>
+              <ul>
+                <li>Developed Flutter mobile applications with BLoC state management</li>
+                <li>Integrated RESTful APIs and enhanced business logic separation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- IBM Certificate -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">April 2023</div>
+              <h3>IBM DevOps, Cloud, and Agile Foundations Certificate</h3>
+            </div>
+          </div>
+
+          <!-- Education VIT -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2021 - 2025</div>
+              <h3>Vellore Institute of Technology</h3>
+              <h4>B.Tech in Computer Science and Engineering</h4>
+              <p>CGPA: 8.4/10.00</p>
+            </div>
+          </div>
+
+          <!-- School -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2021</div>
+              <h3>St. Anselm's Sr. Sec. School</h3>
+              <ul>
+                <li>SSLC: 93.2%</li>
+                <li>HSC: 85.6%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/gauransh18" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://t.me/gauransh18" target="_blank">Telegram</a>
+        <a href="https://instagram.com/gauransh18_" target="_blank"
+          >Instagram</a
+        >
+        <a href="https://github.com/gauransh18" target="_blank">GitHub</a>
+        <a href="https://twitter.com/gauransh18_" target="_blank">Twitter</a>
+      </div>
+      <p>made with ❤️ by Gauransh Sharma</p>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close-resume">&times;</span>
+        <iframe
+          src="https://drive.google.com/file/d/1x0Y85TnnOGuFFc5YkloDwifJMDG72S0U/view"
+          width="100%"
+          height="600px"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Artwork Modal -->
+    <div id="artwork-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close-artwork">&times;</span>
+        <iframe
+          src="https://dribbble.com/gauransh18"
+          width="100%"
+          height="600px"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
