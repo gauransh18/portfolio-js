@@ -625,29 +625,17 @@
 
       <section class="contact" id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Message"
-            rows="5"
-            required
-          ></textarea>
+        <form method="POST" id="contact-form">
+          <input type="hidden" name="access_key" value="55409458-4a15-4b04-b1fd-ed88a266cccb">
+          <input type="hidden" name="subject" value="New Submission from Web3Forms">
+          <input type="checkbox" name="botcheck" style="display: none;">
+
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
           <button type="submit">Send</button>
+
+          <div id="result"></div>
         </form>
       </section>
     </main>
