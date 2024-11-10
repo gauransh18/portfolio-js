@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #0a0a0a;
+  --bg-color: #010101;
   --text-color: #ffffff;
   --grid-color: #1a1a1a;
   --primary-color: #ff5733;
@@ -409,55 +409,111 @@ footer p {
   scrollbar-width: none;  /* Firefox */
 }
 
-.project-card {
-  flex: 0 0 auto;
-  width: 350px; /* Fixed width for cards */
-  scroll-snap-align: start;
+.project-card,
+.view-more-projects {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d); /* Dark gradient */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  padding: 1.5rem;
+  margin: 1rem;
+  min-width: 320px;
+  max-width: 380px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card {
-  background: rgba(26, 26, 26, 0.8);
-  border-radius: 15px;
-  padding: 2rem;
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.project-card::before,
+.view-more-projects::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
+.project-card:hover,
+.view-more-projects:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+  border: 1px solid rgba(52, 152, 219, 0.4); /* Subtle color change on hover */
+}
+
+.project-card:hover::before,
+.view-more-projects:hover::before {
+  opacity: 0.2; /* Subtle shine effect */
+}
+
+.project-card img,
+.view-more-projects img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.project-card:hover img,
+.view-more-projects:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1); /* Slightly brighten images on hover */
 }
 
 .project-content h3 {
+  color: #ffffff; /* Set project name color to white */
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  min-height: 3.6rem;
+  font-weight: bold;
+}
+
+.project-content p {
+  color: #bbb;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  min-height: 4.8rem;
 }
 
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  min-height: 40px;
 }
 
-.tech-stack span {
-  background: var(--primary-color);
-  color: var(--bg-color);
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.9rem;
+.tech-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease;
+}
+
+.tech-logo:hover {
+  transform: scale(1.2);
 }
 
 .project-links {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: auto;
 }
 
 .project-link, .github-link {
-  padding: 0.5rem 1rem;
+  background: #333; /* Dark background for links */
+  color: #ffffff; /* White text for contrast */
   border-radius: 5px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .project-link {
@@ -471,7 +527,7 @@ footer p {
 }
 
 .project-link:hover, .github-link:hover {
-  opacity: 0.8;
+  background: #444; /* Slightly lighter on hover */
   transform: translateY(-2px);
 }
 
