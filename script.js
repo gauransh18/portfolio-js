@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scrolling for navigation links
+
   document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      // Skip only for artwork and resume buttons
+
       if (this.id === 'resume-btn' || this.id === 'artwork-btn') return;
       
       e.preventDefault();
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
         
-        // Update active state manually
+
         document.querySelectorAll('.nav-links a').forEach(link => {
           link.classList.remove('active');
         });
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Active state for navigation
+
   function setActiveLink() {
-    const scrollPosition = window.scrollY + 100; // Offset for better detection
+    const scrollPosition = window.scrollY + 100; 
 
     const sections = document.querySelectorAll('section[id], div[id="skills"]');
     
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', setActiveLink);
-  setActiveLink(); // Initial check
+  setActiveLink(); 
 
-  // Mobile menu toggle
+
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.toggle('active');
   });
 
-  // Close mobile menu when clicking a link
+
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let textIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  const typingSpeed = 100; // Adjust typing speed (milliseconds)
-  const deletingSpeed = 50; // Adjust deleting speed (milliseconds)
-  const pauseTime = 1000; // Time to pause at full text
+  const typingSpeed = 100; 
+  const deletingSpeed = 50; 
+  const pauseTime = 1000; 
 
   function typeText() {
     const currentText = texts[textIndex];
@@ -92,18 +92,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!changingText) return;
 
     if (isDeleting) {
-      // Deleting text
+
       changingText.textContent = currentText.substring(0, charIndex - 1);
       charIndex--;
     } else {
-      // Typing text
+
       changingText.textContent = currentText.substring(0, charIndex + 1);
       charIndex++;
     }
 
-    // Handle text completion or deletion
+
     if (!isDeleting && charIndex === currentText.length) {
-      // Pause at full text
       isDeleting = true;
       setTimeout(typeText, pauseTime);
       return;
@@ -119,10 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeText, isDeleting ? deletingSpeed : typingSpeed);
   }
 
-  // Start the typing animation
   typeText();
 
-  // Timeline animation
+
   const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -132,24 +130,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const timelineObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Get all timeline items within this section
+
         const timelineItems = entry.target.querySelectorAll('.timeline-item');
         timelineItems.forEach(item => {
           item.classList.add('animate');
         });
-        // Unobserve after animation is triggered
+
         timelineObserver.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Observe the timeline section
+
   const timelineSection = document.querySelector('.timeline');
   if (timelineSection) {
     timelineObserver.observe(timelineSection);
   }
 
-  /* Initialize Particles.js */
+
   particlesJS('particles-js',
     {
       "particles": {
@@ -161,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         },
         "color": {
-          "value": "#ff5733" /* Matches your primary color */
+          "value": "#ff5733" 
         },
         "shape": {
           "type": "circle",

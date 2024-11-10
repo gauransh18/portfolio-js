@@ -48,10 +48,8 @@
         <p class="typing-text">I can <span id="changing-text"></span></p>
 
         <div class="skills-container" id="skills">
-          <!-- Marquee Rows -->
           <div class="marquee-row">
             <div class="marquee-content">
-              <!-- Skill Cards -->
               <div class="skill-card">
                 <img src="assets/flutter.png" alt="Flutter" />
                 <span>Flutter</span>
@@ -80,7 +78,7 @@
                 <img src="assets/git.png" alt="Git" />
                 <span>Git</span>
               </div>
-              <!-- Add more duplicates as needed -->
+
               <div class="skill-card">
                 <img src="assets/flutter.png" alt="Flutter" />
                 <span>Flutter</span>
@@ -109,7 +107,7 @@
                 <img src="assets/git.png" alt="Git" />
                 <span>Git</span>
               </div>
-              <!-- Duplicate for seamless loop -->
+
               <div class="skill-card">
                 <img src="assets/flutter.png" alt="Flutter" />
                 <span>Flutter</span>
@@ -123,7 +121,6 @@
 
           <div class="marquee-row reverse">
             <div class="marquee-content">
-              <!-- Skill Cards -->
               <div class="skill-card">
                 <img src="assets/canva.png" alt="Canva" />
                 <span>Canva</span>
@@ -152,7 +149,7 @@
                 <img src="assets/photoshop.png" alt="Photoshop" />
                 <span>Photoshop</span>
               </div>
-              <!-- Add more duplicates as needed -->
+
               <div class="skill-card">
                 <img src="assets/canva.png" alt="Canva" />
                 <span>Canva</span>
@@ -181,7 +178,7 @@
                 <img src="assets/photoshop.png" alt="Photoshop" />
                 <span>Photoshop</span>
               </div>
-              <!-- Duplicate for seamless loop -->
+
               <div class="skill-card">
                 <img src="assets/docker.webp" alt="Docker" />
                 <span>Docker</span>
@@ -204,8 +201,6 @@
 
           <div class="marquee-row">
             <div class="marquee-content">
-              <!-- Skill Cards -->
-
               <div class="skill-card">
                 <img src="assets/react.png" alt="React" />
                 <span>React</span>
@@ -227,7 +222,7 @@
                 <img src="assets/sql.png" alt="MySQL" />
                 <span>MySQL</span>
               </div>
-              <!-- Add more duplicates as needed -->
+
               <div class="skill-card">
                 <img src="assets/jenkins.png" alt="Jenkins" />
                 <span>Jenkins</span>
@@ -257,7 +252,7 @@
                 <img src="assets/sql.png" alt="MySQL" />
                 <span>MySQL</span>
               </div>
-              <!-- Duplicate for seamless loop -->
+
               <div class="skill-card">
                 <img src="assets/react.png" alt="React" />
                 <span>React</span>
@@ -274,7 +269,6 @@
       <section class="projects" id="projects">
         <h2>Featured Projects</h2>
         <div class="projects-container">
-          <!-- Existing project cards -->
           <div class="project-card">
             <div class="project-content">
               <h3>Resilient Microservices Architecture</h3>
@@ -464,7 +458,6 @@
             </div>
           </div> -->
 
-          <!-- View More Projects Card -->
           <div class="project-card view-more-projects">
             <h3>More Projects on GitHub</h3>
             <div class="project-highlights">
@@ -488,7 +481,6 @@
       <section class="timeline" id="experience">
         <h2>Experience & Education</h2>
         <div class="timeline-container">
-          <!-- Current Role -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -516,7 +508,6 @@
             </div>
           </div>
 
-          <!-- Technical Head -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -527,7 +518,6 @@
             </div>
           </div>
 
-          <!-- AWS SA Certificate -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -536,7 +526,6 @@
             </div>
           </div>
 
-          <!-- AWS CP Certificate -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -545,7 +534,6 @@
             </div>
           </div>
 
-          <!-- Edventures -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -569,7 +557,6 @@
             </div>
           </div>
 
-          <!-- Clinigo -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -588,7 +575,6 @@
             </div>
           </div>
 
-          <!-- IBM Certificate -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -597,7 +583,6 @@
             </div>
           </div>
 
-          <!-- Education VIT -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
@@ -626,13 +611,26 @@
       <section class="contact" id="contact">
         <h2>Contact Me</h2>
         <form method="POST" id="contact-form">
-          <input type="hidden" name="access_key" value="55409458-4a15-4b04-b1fd-ed88a266cccb">
-          <input type="hidden" name="subject" value="New Submission from Web3Forms">
-          <input type="checkbox" name="botcheck" style="display: none;">
+          <input
+            type="hidden"
+            name="access_key"
+            value="55409458-4a15-4b04-b1fd-ed88a266cccb"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Submission from Web3Forms"
+          />
+          <input type="checkbox" name="botcheck" style="display: none" />
 
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="5"
+            required
+          ></textarea>
           <button type="submit">Send</button>
 
           <div id="result"></div>
@@ -655,7 +653,6 @@
       <p>made with ❤️ by Gauransh Sharma</p>
     </footer>
 
-    <!-- Resume Modal -->
     <div id="resume-modal" class="modal">
       <div class="modal-content">
         <span class="close-button" id="close-resume">&times;</span>
@@ -667,7 +664,6 @@
       </div>
     </div>
 
-    <!-- Artwork Modal -->
     <div id="artwork-modal" class="modal">
       <div class="modal-content">
         <span class="close-button" id="close-artwork">&times;</span>
