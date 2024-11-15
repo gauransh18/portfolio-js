@@ -827,3 +827,59 @@ section, div[id="skills"] {
   position: relative;
   overflow: hidden;   
 }
+
+.projects-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 87, 51, 0.2);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.scroll-btn span {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.scroll-btn:hover {
+  background: rgba(255, 87, 51, 0.4);
+}
+
+.scroll-left {
+  left: 10px;
+}
+
+.scroll-right {
+  right: 10px;
+}
+
+.projects-container {
+  scroll-behavior: smooth;
+  padding: 1rem 50px;
+}
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .scroll-btn span {
+    font-size: 1.2rem;
+  }
+}
