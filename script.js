@@ -268,36 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const scrollLeftBtn = document.querySelector('.scroll-left');
-  const scrollRightBtn = document.querySelector('.scroll-right');
-  const projectsContainer = document.querySelector('.projects-container');
-
-  const scrollAmount = 400; 
-
-  scrollLeftBtn?.addEventListener('click', () => {
-    projectsContainer.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth'
-    });
-  });
-
-  scrollRightBtn?.addEventListener('click', () => {
-    projectsContainer.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  });
-
-  const checkScrollButtons = () => {
-    const { scrollLeft, scrollWidth, clientWidth } = projectsContainer;
-    
-    scrollLeftBtn.style.opacity = scrollLeft <= 0 ? '0.3' : '1';
-    scrollRightBtn.style.opacity = 
-      scrollLeft >= scrollWidth - clientWidth ? '0.3' : '1';
-  };
-
-  projectsContainer.addEventListener('scroll', checkScrollButtons);
-  checkScrollButtons(); 
+  initializeProjectScroll();
 });
 
 window.onload = function() {
@@ -311,3 +282,52 @@ function scrollToContact(event) {
 }
 
 scrollToTop();
+
+function initializeProjectScroll() {
+  const container = document.querySelector('.projects-container');
+  const leftButton = document.getElementById('scroll-left');
+  const rightButton = document.getElementById('scroll-right');
+  
+  if (!container || !leftButton || !rightButton) return;
+
+  const scrollAmount = 400;
+  
+  function updateScrollButtons() {
+    leftButton.disabled = container.scrollLeft <= 0;
+    rightButton.disabled = container.scrollLeft >= container.scrollWidth - container.clientWidth;
+  }
+
+  function smoothScroll(element, target) {
+    element.scrollTo({
+      left: target,
+      behavior: 'smooth'
+    });
+  }
+
+
+  leftButton.addEventListener('click', () => {
+    const target = container.scrollLeft - scrollAmount;
+    smoothScroll(container, target);
+  });
+
+  rightButton.addEventListener('click', () => {
+    const target = container.scrollLeft + scrollAmount;
+    smoothScroll(container, target);
+  });
+
+  container.addEventListener('scroll', updateScrollButtons);
+  
+  window.addEventListener('resize', updateScrollButtons);
+  
+  updateScrollButtons();
+
+  container.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      leftButton.click();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      rightButton.click();
+    }
+  });
+}

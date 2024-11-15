@@ -397,6 +397,7 @@ footer p {
   padding: 1rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch; 
+  
 }
 
 
@@ -832,54 +833,60 @@ section, div[id="skills"] {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
-.scroll-btn {
+.scroll-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 87, 51, 0.2);
-  border: none;
   width: 40px;
   height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.scroll-btn span {
-  color: white;
-  font-size: 1.5rem;
+.scroll-button:hover {
+  background: var(--primary-color);
 }
 
-.scroll-btn:hover {
-  background: rgba(255, 87, 51, 0.4);
+.scroll-button.left {
+  left: 0;
 }
 
-.scroll-left {
-  left: 10px;
+.scroll-button.right {
+  right: 0;
 }
 
-.scroll-right {
-  right: 10px;
+.scroll-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .scroll-button {
+    display: none;
+  }
+  
+  .projects-wrapper {
+    padding: 0;
+  }
 }
 
 .projects-container {
   scroll-behavior: smooth;
-  padding: 1rem 50px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
 }
 
-@media (max-width: 768px) {
-  .scroll-btn {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .scroll-btn span {
-    font-size: 1.2rem;
-  }
-}
